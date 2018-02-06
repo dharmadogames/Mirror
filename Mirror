@@ -1,0 +1,29 @@
+
+public class Mirrored {
+
+	public static String mirrorEnds(String string) {
+		 String Palindrone = string; 
+		 int repition = 0;
+		 int repition2 = Palindrone.length();
+		 String forward = "";
+		 String backward = ""; 
+		 String Last_Set = "";
+		  while (true) {
+		  if(repition == Palindrone.length()) {return Palindrone;}
+		  forward = forward + Character.toString(Palindrone.charAt(repition)); 
+		  				System.out.println(forward);
+		  backward = backward + Palindrone.charAt(repition2 - 1);
+		  				System.out.println(backward);
+		  if(forward.equals(backward) == false) {return Last_Set;}
+		  repition2 = repition2-1; 
+		  repition++;
+		  Last_Set = forward; 
+		  }
+		} 
+	
+	
+	public static void main(String[] args) {
+		String test2 = "Hello olleH";
+		String Test = mirrorEnds(test2);
+	}
+}
